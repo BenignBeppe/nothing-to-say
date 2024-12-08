@@ -186,11 +186,12 @@ function toggle_mute(mute, give_feedback) {
       show_osd(null, mute, mute ? 0 : microphone.level);
     }
     if (settings.get_boolean("play-feedback-sounds")) {
-        if (mute) {
-            audio_player.play_off();
-        } else {
-            audio_player.play_on();
-        }
+      if (mute) {
+          audio_player.play_off();
+      } else {
+          audio_player.play_on();
+      }
+    }
   });
 }
 
